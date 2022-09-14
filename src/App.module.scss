@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: 'Sora', sans-serif;
   font-weight: 400;
   font-size: 24px;
@@ -7,4 +7,28 @@ body {
   color: #EEEEEE;
   background-color: #12122D;
   padding: 0 220px;
+  max-width: 1920px;
+  @media (max-width: 960px) {
+    max-width: 960px;
+    padding: 0 50px;
+  }
+ 
+  @media (max-width: 768px) {
+    max-width: 768px;
+    padding: 0 20px;
+  }
+  @media (max-width: 480px) {
+    max-width: 480px;
+    padding: 0 10px;
+  }
+  @media (max-width: 320px) {
+    max-width: 320px;
+    padding: 0 5px;
+  }
+}
+.Content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
 }

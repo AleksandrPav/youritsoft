@@ -9,24 +9,30 @@ const Users = ({ users, loading, onClick }) => {
 
     const onClickHandler = (e) => {
         onClick(e.target.value);
+      
+        const id = Number(e.target.value);
+        return id;
     };
 
-
+    // add class to active ul
+  
+    
     return (
         <div className={scss.UsersInfo}>
         <ul className={scss.UsersItems} >
             {users.map((user) => (
-                <li className={scss.UserItem} key={user.id}>
+                <li className={scss.UserItem} key={user.id}  >
                     <h3 className={scss.UserName}>{user.name}</h3>
                     <a className={scss.UserEmail} href={`mailto:${user.email}`}>{ user.email }</a>
                     <a className={scss.UserPhone} href={`tel:${user.phone}`}>{user.phone}</a>
-                    <button onClick={onClickHandler} className={scss.PostButton} type="submite">Read the posts</button>
+                    <button value={user.id} onClick={onClickHandler} className={scss.PostButton} type="submite">Read the posts</button>
                 </li>
             ))}
         </ul>
         </div>
     );
 };
+
     
 export default Users;
 

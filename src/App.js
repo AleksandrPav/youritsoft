@@ -4,7 +4,7 @@ import { getUsers } from "./shared/API/getApi";
 
 import Users from './Components/Content/Users/Users';
 import FormSearch from './Components/FormSearch/FormSearch';
-// import PostSearch from './Components/PostSearch/PostSearch';
+import Posts from './Components/Content/Posts/Posts';
 import Pagination from './Components/Pagination/Pagination';
 
 
@@ -13,7 +13,8 @@ import scss from './App.module.scss';
 function App() {
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
-  const [post, setPost] = useState([]);
+  const [currentId, setCurrentId] = useState(null);
+  const [onClick, setOnClick] = useState(false);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [usersPerPage] = useState(4);
@@ -45,11 +46,14 @@ function App() {
     setSearch(e.target.value);
   };
 // Post search
-  const onClickSearch = (e) => {
-    e.preventDefault();
-    setPost(e.target.value);
+  const onClickSearch = (id) => {
+    setOnClick(true);
+    setCurrentId(id);
   };
-
+// add class active
+  
+ 
+  
   
 
   // Get current users
@@ -66,20 +70,38 @@ function App() {
     }
   }
 
+  console.log(onClick);
+
   return (
-    <div className={scss.body}>
+    <div className={scss.App}>
       <FormSearch
         onSubmit={searchUser}
         search={search}
       />
-      <Users
+      {onClick ? (
+        <div className={scss.contentActive}>
+           <Users
         users={currentUsers}
         loading={loading}
         onClick={onClickSearch}
-      />
-      {/* <PostSearch
-      /> */}
+        />
+        <Posts
+          currentId={currentId}
+          onClick={onClick}
+          />
+        </div>
+      ) : (
+          <div className={scss.content}>
+            <Users
+        users={currentUsers}
+        loading={loading}
+        onClick={onClickSearch}
+            />
+            
+          </div>
+        )}       
 
+      
       <Pagination
         paginate={paginate}
         currentPage={currentPage}
@@ -89,3 +111,4 @@ function App() {
 }
 
 export default App;
+

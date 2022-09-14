@@ -1,0 +1,36 @@
+.PostsInfo{
+    background-color: #333348;
+    overflow: auto;
+    padding: 108px 150px;
+    border-radius: 40px;
+    margin-left: 35px;
+    margin-right: 0;
+}
+.PostsItems{
+    width: 570px;
+    height: 554px;
+    list-style: none;
+}
+.PostTitle{
+    text-align: center;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.25;
+    color: #ffffff;
+    &::after{
+        content: '';
+        display: block;
+        width: 570px;
+        height: 0px;
+        border: 1px solid #4C4C6A;
+        margin-top: 20px;
+    }
+}
+
+.PostBody{
+    text-align: justify;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.25;
+    color: #ffffff;
+}

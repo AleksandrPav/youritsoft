@@ -4,6 +4,9 @@
     align-items: center;
     height: 70px;
     padding-top: 50px;
+    @media (max-width: 320px) {
+            justify-content: center;
+        }
 }
 .input{
     max-width: 85px;
@@ -13,4 +16,13 @@
     font-size: 24px;
     outline: none;
     background-color: #333348;
+}
+.FormSearchTitle{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #ffffff;
+    @media (max-width: 320px) {
+        display: none;
+    }
 }

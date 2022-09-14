@@ -5,15 +5,16 @@ const instance = axios.create({
 });
 
 
-export const getPosts = async (_page = 1) => {
-    const { data } = await instance.get("/posts", {});
+export const getPosts = async (userId) => {
+    const {data} = await instance.get(`/posts?userId=${userId}`);
     return data;
+ 
 };
 
 export const getUsers = async () => {
-    const { data } = await instance.get("/users", {
-    });
+    const { data } = await instance.get("/users");
     return data;
 };
 
-console.log(getUsers());
+console.log(getPosts(1));
+

@@ -1,5 +1,4 @@
 .UsersInfo{
-    margin-top: 35px;
     display: flex;
     justify-content: center;
 }
@@ -8,8 +7,19 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 970px;
+    width: 100vh;
     padding: 0;
+    margin: 0;
+    list-style: none;
+    @media (max-width: 768px) {
+        width: 570px;
+        }
+    
+    @media (max-width: 480px) {
+        flex-direction: column;
+        width: 270px;
+        }
+   
 }
 
 .UserItem{
@@ -34,10 +44,35 @@
     & > *{
         margin-bottom: 25px;
     }
+    @media (max-width: 960px) {
+        width: 320px;
+        height: 270px;
+    }
+    @media (max-width: 768px) {
+         width: 270px;
+        height: 220px;
+    }
+    @media (max-width: 480px) {
+        width: 270px;
+        height: 220px;
+        margin-bottom: 15px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &:nth-child(2n+1){
+        margin-right: 0;
+    }
+        &:nth-child(-n+2) {
+            margin-bottom:15px;
+        }
+}
 }
 .UserName{
     text-align: center;
-    margin-top: 0;
+    @media (max-width: 960px) {
+        font-size: 20px;
+    }
+
 }
 .UserEmail{
     text-decoration: none;
@@ -46,6 +81,9 @@
     &:hover{
         color: #FFD700;
     }
+    @media (max-width: 960px) {
+    font-size: 18px;
+    }
 }
 .UserPhone{
     text-decoration: none;
@@ -53,6 +91,9 @@
     transition: all 0.3s ease;
     &:hover{
         color: #FFD700;
+    }
+    @media (max-width: 960px) {
+        font-size: 18px;
     }
 }
 
@@ -77,4 +118,17 @@
     &:active{
         transform: scale(0.9);
     }
+        @media (max-width: 960px) {
+        font-size: 18px;
+        padding: 15px 34px;
+        }
+        @media (max-width: 768px) {
+        font-size: 16px;
+        padding: 10px 24px;
+        }
+        @media (max-width: 480px) {
+        font-size: 14px;
+        padding: 5px 14px;
+        }
+
 }
