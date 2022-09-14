@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/youritsoft/static/css/main.8dbe2472.css",
+    "main.js": "/youritsoft/static/js/main.86e9339c.js",
+    "index.html": "/youritsoft/index.html",
+    "main.8dbe2472.css.map": "/youritsoft/static/css/main.8dbe2472.css.map",
+    "main.86e9339c.js.map": "/youritsoft/static/js/main.86e9339c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8dbe2472.css",
+    "static/js/main.86e9339c.js"
+  ]
+}
