@@ -1,0 +1,80 @@
+.UsersInfo{
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.UsersItems{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 970px;
+    padding: 0;
+}
+
+.UserItem{
+    width: 420px;
+    height: 370px;
+    background-color: #333348;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    &:hover{
+        transform: scale(1.1);
+    }
+    &:nth-child(2n+1){
+        margin-right: 30px;
+    }
+    &:nth-child(-n+2){
+        margin-bottom: 30px;
+    }
+    & > *{
+        margin-bottom: 25px;
+    }
+}
+.UserName{
+    text-align: center;
+    margin-top: 0;
+}
+.UserEmail{
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    &:hover{
+        color: #FFD700;
+    }
+}
+.UserPhone{
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    &:hover{
+        color: #FFD700;
+    }
+}
+
+.PostButton{
+    box-sizing: content-box;
+    background-color: #52519D;
+    padding: 20px 44px;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    font-weight: 400;
+    color: inherit;
+    font-size: 24px;
+    line-height: 1.25;
+    border: none;
+    margin-bottom: 0;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+        background-color: #FFD700;
+        color: #333348;
+    }
+    &:active{
+        transform: scale(0.9);
+    }
+}
