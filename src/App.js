@@ -100,8 +100,6 @@ function App() {
             
           </div>
         )}       
-
-      
       <Pagination
         paginate={paginate}
         currentPage={currentPage}
