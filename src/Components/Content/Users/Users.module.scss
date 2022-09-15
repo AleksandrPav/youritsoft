@@ -1,16 +1,13 @@
-.UsersInfo{
-    display: flex;
-    justify-content: center;
-}
 
 .UsersItems{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    width: 100vh;
     padding: 0;
     margin: 0;
     list-style: none;
+    width: 870px;
+    flex-wrap: wrap;
+
     @media (max-width: 768px) {
         width: 570px;
         }
@@ -97,7 +94,7 @@
     }
 }
 
-.PostButton{
+.UserButton{
     box-sizing: content-box;
     background-color: #52519D;
     padding: 20px 44px;
@@ -131,4 +128,120 @@
         padding: 5px 14px;
         }
 
+}
+
+.PostsItems{
+    display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 570px;
+        flex-wrap: wrap;
+        @media (max-width: 480px) {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+}
+
+.PostsItem{
+    width:270px;
+    height: 265px;
+    background-color: #333348;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+     &:hover {
+            transform: scale(1.1);
+        }
+    
+        &:nth-child(2n+1) {
+            margin-right: 30px;
+        }
+    
+        &:nth-child(-n+2) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width:480px) {
+            width: 270px;
+            height: 220px;
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:nth-child(2n+1) {
+                margin-right: 0;
+            }
+            &:nth-child(-n+2) {
+                margin-bottom: 15px;
+            }
+            
+        }
+}
+
+.PostsName{
+    font-size: 18px;
+    line-height: 1.27;
+    text-align: center;
+}
+.PostsEmail{
+    font-size: 18px;
+    line-height: 1.27;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    &:hover {
+            color: #FFD700;
+        }
+}
+.PostsPhone{
+    font-size: 18px;
+    line-height: 1.27;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    &:hover {
+            color: #FFD700;
+        }
+
+}
+.PostButton{
+    box-sizing: content-box;
+    background-color: #52519D;
+    padding: 15px 34px;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    font-weight: 400;
+    color: inherit;
+    font-size: 18px;
+    line-height: 1.25;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 0;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+        background-color: #FFD700;
+        color: #333348;
+    }
+    &:active{
+        transform: scale(0.9);
+    }
+        @media (max-width: 768px) {
+        font-size: 16px;
+        padding: 10px 24px;
+        }
+        @media (max-width: 480px) {
+        font-size: 14px;
+        padding: 5px 14px;
+        }
 }

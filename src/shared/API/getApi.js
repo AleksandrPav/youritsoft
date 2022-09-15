@@ -16,5 +16,3 @@ export const getUsers = async () => {
     return data;
 };
 
-console.log(getPosts(1));
-

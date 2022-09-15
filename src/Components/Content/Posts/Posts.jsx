@@ -21,7 +21,7 @@ const Posts = ({onClick, currentId }) => {
      
     }, [currentId, onClick]);
 
-
+ 
     return (
         <div className={scss.PostsInfo}>
             <ul className={scss.PostsItems}>

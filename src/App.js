@@ -6,6 +6,7 @@ import Users from './Components/Content/Users/Users';
 import FormSearch from './Components/FormSearch/FormSearch';
 import Posts from './Components/Content/Posts/Posts';
 import Pagination from './Components/Pagination/Pagination';
+import Button from './Modules/Button/Button';
 
 
 import scss from './App.module.scss';
@@ -50,7 +51,19 @@ function App() {
     setOnClick(true);
     setCurrentId(id);
   };
-// add class active
+// sort by name
+  const sortByName = () => {
+    const sortedUsers = [...users].sort((a, b) => {
+      if (a.name > b.name) {
+        return 1;
+      } else if (a.name < b.name) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+    setUsers(sortedUsers);
+  };
   
  
   
@@ -70,16 +83,18 @@ function App() {
     }
   }
 
-  console.log(onClick);
-
   return (
     <div className={scss.App}>
       <FormSearch
         onSubmit={searchUser}
         search={search}
       />
+      <Button
+        onClick={sortByName}
+      />
+    
       {onClick ? (
-        <div className={scss.contentActive}>
+        <div className={scss.ContentActive}>
            <Users
         users={currentUsers}
         loading={loading}
@@ -91,7 +106,7 @@ function App() {
           />
         </div>
       ) : (
-          <div className={scss.content}>
+          <div className={scss.Content}>
             <Users
         users={currentUsers}
         loading={loading}
