@@ -65,10 +65,6 @@ function App() {
     setUsers(sortedUsers);
   };
   
- 
-  
-  
-
   // Get current users
   const indexOfLastUser = currentPage * usersPerPage;
   const indexOfFirstUser = indexOfLastUser - usersPerPage;
