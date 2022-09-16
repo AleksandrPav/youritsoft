@@ -8,7 +8,8 @@ body {
   background-color: #12122D;
   padding: 0 225px;
   max-width: 1920px;
-  @media (max-width: 960px) {
+ 
+  @media (max-width: 960.99px) {
     max-width: 960px;
     padding: 0 50px;
   }
@@ -38,7 +39,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-top: 35px;
-  @media (max-width: 960px) {
+  @media (max-width: 1700px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
